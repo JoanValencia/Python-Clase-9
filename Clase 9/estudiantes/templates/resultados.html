@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Estudiantes</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}" />
+	</head>
+	<body>
+		{% for k, v in res.items() %}
+			<b>{{ k }} :</b> {{ v }} <br><br>
+		{% endfor %}
+	</body>
+</html>
+
+

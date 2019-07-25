@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script type="text/javascript" src="{{ url_for('static', filename = 'hello.js') }}"></script>
+	</head>
+	<body>
+		<h1>Hola {{ user }}</h1>
+		{% if user == 'admin' %}
+		<table>
+		{% for k, v in dict.iteritems() %}
+			<tr>
+				<th>{{ k }}</th>
+				<td>{{ v }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+		{% else %}
+			<h3>Como invitado no puede ver la data</h3>
+		{% endif %}
+		<input type="button" onclick="saluda()" value="saludar" />
+	</body>
+</html>
+
+
